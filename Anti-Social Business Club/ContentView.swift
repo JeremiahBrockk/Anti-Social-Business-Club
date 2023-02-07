@@ -15,34 +15,61 @@ struct ContentView: View {
         NavigationStack {
             ScrollView(.horizontal, showsIndicators: true) {
                 //HStack {
-                Text("Searching for \(searchText)")
-                    .position(x:185, y: 6)
-                Circle()
-                    .frame(width: 75, height: 200)
-                    .position(x:113, y:-15)
-                    .foregroundColor(.green)
-                Circle()
-                    .frame(width: 75, height: 200)
-                    .position(x:37, y: -95)
-                Circle()
-                    .frame(width: 75, height: 200)
-                    .position(x:188, y: -170)
-                Circle()
-                    .frame(width: 75, height: 200)
-                    .position(x:265, y: -250)
-                Circle()
-                    .frame(width: 75, height: 200)
-                    .position(x:340, y: -325)
+             //   Text("Searching for \(searchText)")
+                    Spacer()
+                Grid {
+                    GridRow {
+                        GridRow {
+                            Circle()
+                                .stroke(.yellow, lineWidth: 5)
+                                .frame(width: 91)
+                                Circle()
+                                .stroke(.yellow, lineWidth: 5)
+                                .frame(width: 91)
+                            Circle()
+                                .stroke(.yellow, lineWidth: 5)
+                                .frame(width: 91)
+                            Circle()
+                                .stroke(.yellow, lineWidth: 5)
+                                .frame(width: 91)
+                            Circle()
+                                .stroke(.yellow, lineWidth: 5)
+                                .frame(width: 91)
+                            Circle()
+                                .stroke(.yellow, lineWidth: 5)
+                                .frame(width: 91)
+                            Circle()
+                                .stroke(.yellow, lineWidth: 5)
+                                .frame(width: 91)
+                            
+                            
+                        }
+                        Spacer()
+                        
+                    }
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    
+                }
+             Spacer()
+               Spacer()
+                Spacer()
                     
                     
                     
                 }
+            
             }
         
         //}
         .searchable(text: $searchText)
         
     }
+    
     //.padding()
 }
 

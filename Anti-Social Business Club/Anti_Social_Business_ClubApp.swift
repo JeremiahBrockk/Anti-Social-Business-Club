@@ -11,7 +11,7 @@ import SwiftUI
 struct Anti_Social_Business_ClubApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }

@@ -1,0 +1,27 @@
+//
+//  Interests.swift
+//  Anti-Social Business Club
+//
+//  Created by Mr. Brock💰🤟🏾 on 1/25/23.
+//
+
+import SwiftUI
+
+struct Profile: View {
+    var body: some View {
+        
+            VStack {
+                
+                
+                
+            }
+        }
+        
+    }
+
+
+struct Profile_Previews: PreviewProvider {
+    static var previews: some View {
+    Profile()
+    }
+}
