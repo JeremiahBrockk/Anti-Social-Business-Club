@@ -16,10 +16,11 @@ struct ContentView: View {
             ScrollView(.horizontal, showsIndicators: true) {
                 //HStack {
                 Text("Searching for \(searchText)")
-                    .position(x:185, y: -)
+                    .position(x:185, y: 6)
                 Circle()
                     .frame(width: 75, height: 200)
                     .position(x:113, y:-15)
+                    .foregroundColor(.green)
                 Circle()
                     .frame(width: 75, height: 200)
                     .position(x:37, y: -95)
