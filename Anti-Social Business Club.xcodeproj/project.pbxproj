@@ -13,6 +13,7 @@
 		0F2969E3298164B4008EFB5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F2969E2298164B4008EFB5D /* Preview Assets.xcassets */; };
 		0F2969F729895DA1008EFB5D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2969F629895DA1008EFB5D /* SplashView.swift */; };
 		0F81628A29929F4200C63F15 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F81628929929F4200C63F15 /* Profile.swift */; };
+		C7F54BBA2993F8F000FCD2D9 /* chatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F54BB92993F8F000FCD2D9 /* chatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0F2969F1298820A5008EFB5D /* Anti-Social-Business-Club-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Anti-Social-Business-Club-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0F2969F629895DA1008EFB5D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0F81628929929F4200C63F15 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		C7F54BB92993F8F000FCD2D9 /* chatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		0F2969CF298164B3008EFB5D = {
 			isa = PBXGroup;
 			children = (
+				C7F54BB92993F8F000FCD2D9 /* chatView.swift */,
 				0F2969DA298164B3008EFB5D /* Anti-Social Business Club */,
 				0F2969D9298164B3008EFB5D /* Products */,
 			);
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F54BBA2993F8F000FCD2D9 /* chatView.swift in Sources */,
 				0F2969DE298164B3008EFB5D /* ContentView.swift in Sources */,
 				0F81628A29929F4200C63F15 /* Profile.swift in Sources */,
 				0F2969DC298164B3008EFB5D /* Anti_Social_Business_ClubApp.swift in Sources */,
