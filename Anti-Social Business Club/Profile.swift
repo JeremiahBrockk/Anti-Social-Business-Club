@@ -12,26 +12,40 @@ struct Profile: View {
         
         ZStack{
             
-            Color.teal
-                .ignoresSafeArea()
+            //Color.teal
+              //  .ignoresSafeArea()
             VStack{
-              //  Image(systemName: "plus.rectangle")
+                
+                VStack {
+                    Image(systemName: "plus.rectangle")
+                        
+                }
+                .frame(minHeight: 272)
+                
+                VStack {
+                    Rectangle()
+                        .foregroundStyle(.teal)
+                        .frame(width: 400, height: 5)
+                    Spacer()
                     
+                    Text("Create A Bio")
+                        .bold()
+                    Spacer()
+                    Text("Add Photos of Your Business")
+                    Spacer()
                     
-                Rectangle()
-                
-                    .foregroundColor(.white)
-                    .frame(width: 400, height: 250)
-                Spacer()
-                
-                Text("Create A Bio")
-                    .bold()
-                Spacer()
-                Text("Add Photos of Your Business")
-                Spacer()
-                
-                Grid {
-                    GridRow {
+                    Grid {
+                        GridRow {
+                            GridRow {
+                                Rectangle()
+                                    .frame(width: 102, height: 109)
+                                Rectangle()
+                                    .frame(width: 102, height: 109)
+                                Rectangle()
+                                    .frame(width: 102, height: 109)
+                                Spacer()
+                            }
+                        }
                         GridRow {
                             Rectangle()
                                 .frame(width: 102, height: 109)
@@ -39,19 +53,12 @@ struct Profile: View {
                                 .frame(width: 102, height: 109)
                             Rectangle()
                                 .frame(width: 102, height: 109)
-                            Spacer()
                         }
+                        Spacer()
                     }
-                    GridRow {
-                        Rectangle()
-                            .frame(width: 102, height: 109)
-                        Rectangle()
-                            .frame(width: 102, height: 109)
-                        Rectangle()
-                            .frame(width: 102, height: 109)
-                    }
-                    Spacer()
                 }
+                .background(.teal)
+            
                 
             }
         }

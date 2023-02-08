@@ -15,15 +15,15 @@ struct ContentView: View {
         NavigationStack {
             ScrollView(.horizontal, showsIndicators: true) {
                 //HStack {
-             //   Text("Searching for \(searchText)")
-                    Spacer()
+                //   Text("Searching for \(searchText)")
+                Spacer()
                 Grid {
                     GridRow {
                         GridRow {
                             Circle()
                                 .stroke(.yellow, lineWidth: 5)
                                 .frame(width: 91)
-                                Circle()
+                            Circle()
                                 .stroke(.yellow, lineWidth: 5)
                                 .frame(width: 91)
                             Circle()
@@ -55,15 +55,15 @@ struct ContentView: View {
                     Spacer()
                     
                 }
-             Spacer()
-               Spacer()
                 Spacer()
-                    
-                    
-                    
-                }
-            
+                Spacer()
+                Spacer()
+                
+                
+                
             }
+            
+        }
         
         //}
         .searchable(text: $searchText)
