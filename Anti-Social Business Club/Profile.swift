@@ -12,19 +12,18 @@ struct Profile: View {
         
         ZStack{
             
-            //Color.teal
-              //  .ignoresSafeArea()
             VStack{
                 
                 VStack {
                     Image(systemName: "plus.rectangle")
-                        
+                        .imageScale(.large)
+                    
                 }
                 .frame(minHeight: 272)
                 
                 VStack {
                     Rectangle()
-                        .foregroundStyle(.teal)
+                        .foregroundStyle(.white)
                         .frame(width: 400, height: 5)
                     Spacer()
                     
@@ -58,7 +57,7 @@ struct Profile: View {
                     }
                 }
                 .background(.teal)
-            
+                
                 
             }
         }
