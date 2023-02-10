@@ -43,7 +43,7 @@ struct MessageView: View {
                     .frame(width: 400, height:50)
                 Spacer()
                 
-                NavigationLink(destination: MessageView()){
+                NavigationLink(destination: ChatView()){
                     Image("fluer")
                         .resizable()
                         .scaledToFit()
