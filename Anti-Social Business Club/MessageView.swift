@@ -23,6 +23,7 @@ struct textView: View {
                 .foregroundColor(.green)
                 .padding()
                 .padding()
+            
         }
         
         

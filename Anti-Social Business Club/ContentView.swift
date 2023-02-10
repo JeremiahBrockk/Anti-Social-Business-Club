@@ -7,7 +7,7 @@
 
 import SwiftUI
 struct categoryView: View {
-    @State var isTapped = false
+    @State var isTapped = true
     let images = ["tshirt", "desktopcomputer","takeoutbag.and.cup.and.straw","plus","house", "mouth"]
     var imageIndex = 0
     var body: some View {
@@ -15,6 +15,7 @@ struct categoryView: View {
         Button {
             isTapped.toggle()
         } label: {
+            
             if isTapped {
                 Image(images[imageIndex])
                     .frame(width: 91, height: 65)
@@ -23,7 +24,7 @@ struct categoryView: View {
                     .background(.yellow)
                     .clipShape(Circle())
             }
-   //     }else{
+        //}; else {
             Image(images[imageIndex])
             .frame(width: 91, height: 65)
             .foregroundColor(.black)
@@ -36,7 +37,7 @@ struct categoryView: View {
 
 struct ContentView: View {
     @State private var searchText = ""
-    @State var isTapped = false
+   // @State var isTapped = false
     
     var body: some View {
         NavigationView {
@@ -49,7 +50,7 @@ struct ContentView: View {
                             Image(systemName: "tshirt")
                                 .frame(width: 91, height: 65)
                                 .foregroundColor(.black)
-                                .padding()
+                               // .padding()
                                 .background(.white)
                                 .clipShape(Circle())
                             
@@ -60,7 +61,7 @@ struct ContentView: View {
                             Image(systemName: "desktopcomputer")
                                 .frame(width: 91, height: 65)
                                 .foregroundColor(.black)
-                                .padding()
+                                //.padding()
                                 .background(.yellow)
                                 .clipShape(Circle())
                             
@@ -71,7 +72,7 @@ struct ContentView: View {
                             Image(systemName: "takeoutbag.and.cup.and.straw")
                                 .frame(width: 91, height: 65)
                                 .foregroundColor(.black)
-                                .padding()
+                               // .padding()
                                 .background(.yellow)
                                 .clipShape(Circle())
                             
@@ -82,7 +83,7 @@ struct ContentView: View {
                             Image(systemName: "plus")
                                 .frame(width: 91, height: 65)
                                 .foregroundColor(.black)
-                                .padding()
+                               // .padding()
                                 .background(.yellow)
                                 .clipShape(Circle())
                             
@@ -93,7 +94,7 @@ struct ContentView: View {
                             Image(systemName: "house")
                                 .frame(width: 91, height: 65)
                                 .foregroundColor(.black)
-                                .padding()
+                              //  .padding()
                                 .background(.yellow)
                                 .clipShape(Circle())
                             
@@ -104,22 +105,36 @@ struct ContentView: View {
                             Image(systemName: "mouth")
                                 .frame(width: 91, height: 65)
                                 .foregroundColor(.black)
-                                .padding()
+                             //   .padding()
                                 .background(.yellow)
                                 .clipShape(Circle())
                             
+                            
                         }
+                        
                     }
                   .background { Color.mint }
+                    
                 }
                 Spacer()
+                NavigationView {
+                  //  VStack {
+                        ScrollView(.vertical) {
+                            ColumnImages()
+                  //      }
+                    }
+                }
+                Spacer()
+                   .frame(height: 5)
                 // eventually, this will be the view that holds all of the photos in a lazy v grid
             }
-            .searchable(text: $searchText)
+         //.searchable(text: $searchText)
+           
+            
         //    .navigationTitle("app")
 //            .toolbarBackground(Color.mint, for: .navigationBar)
         }
-        
+        .searchable(text: $searchText)
         
     }
     
