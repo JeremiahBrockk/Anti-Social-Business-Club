@@ -21,23 +21,24 @@ struct categoryView: View {
                     .frame(width: 91, height: 65)
                     .foregroundColor(.black)
                     .padding()
-                    .background(.yellow)
+                    .background(.white)
                     .clipShape(Circle())
             }
-        //}; else {
+     //   };else {
             Image(images[imageIndex])
-            .frame(width: 91, height: 65)
-            .foregroundColor(.black)
-            .padding()
-            .background(.white)
-            .clipShape(Circle())
+                .frame(width: 91, height: 65)
+                .foregroundColor(.black)
+                .padding()
+                .background(.white)
+                .clipShape(Circle())
+        
         }
     }
 }
 
 struct ContentView: View {
     @State private var searchText = ""
-   // @State var isTapped = false
+    @State var isTapped = true
     
     var body: some View {
         NavigationView {
@@ -45,14 +46,24 @@ struct ContentView: View {
                 ScrollView(.horizontal) {
                     HStack {
                         Button {
+                            isTapped.toggle()
                             print("Button was pressed!")
                         } label: {
-                            Image(systemName: "tshirt")
-                                .frame(width: 91, height: 65)
-                                .foregroundColor(.black)
-                               // .padding()
-                                .background(.white)
-                                .clipShape(Circle())
+                            if isTapped {
+                                Image(systemName: "tshirt")
+                                    .frame(width: 91, height: 65)
+                                    .foregroundColor(.black)
+                                // .padding()
+                                    .background(.yellow)
+                                    .clipShape(Circle())
+                            } else {
+                                Image(systemName: "tshirt")
+                                    .frame(width: 91, height: 65)
+                                    .foregroundColor(.black)
+                                // .padding()
+                                    .background(.white)
+                                    .clipShape(Circle())
+                            }
                             
                         }
                         Button {
@@ -62,7 +73,7 @@ struct ContentView: View {
                                 .frame(width: 91, height: 65)
                                 .foregroundColor(.black)
                                 //.padding()
-                                .background(.yellow)
+                                .background(.white)
                                 .clipShape(Circle())
                             
                         }
@@ -73,7 +84,7 @@ struct ContentView: View {
                                 .frame(width: 91, height: 65)
                                 .foregroundColor(.black)
                                // .padding()
-                                .background(.yellow)
+                                .background(.white)
                                 .clipShape(Circle())
                             
                         }
@@ -84,7 +95,7 @@ struct ContentView: View {
                                 .frame(width: 91, height: 65)
                                 .foregroundColor(.black)
                                // .padding()
-                                .background(.yellow)
+                                .background(.white)
                                 .clipShape(Circle())
                             
                         }
@@ -95,7 +106,7 @@ struct ContentView: View {
                                 .frame(width: 91, height: 65)
                                 .foregroundColor(.black)
                               //  .padding()
-                                .background(.yellow)
+                                .background(.white)
                                 .clipShape(Circle())
                             
                         }
@@ -106,7 +117,7 @@ struct ContentView: View {
                                 .frame(width: 91, height: 65)
                                 .foregroundColor(.black)
                              //   .padding()
-                                .background(.yellow)
+                                .background(.white)
                                 .clipShape(Circle())
                             
                             

@@ -43,23 +43,23 @@ struct MessageView: View {
                     .frame(width: 400, height:50)
                 Spacer()
                 
-                NavigationLink(destination: MessageView()){
-                    Image("fluer")
-                        .resizable()
-                        .scaledToFit()
-                        .clipShape(Circle())
-                        .overlay(
-                            Circle()
-                                .stroke(.red, style: StrokeStyle(lineWidth:1))
-                        )
-                }
-                Spacer(minLength: 490)
-                
-                textView()
-                
-                
-                
+                  NavigationLink(destination: MessageView()){
+                Image("fluer")
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(Circle())
+                    .overlay(
+                        Circle()
+                            .stroke(.red, style: StrokeStyle(lineWidth:1))
+                    )
             }
+            Spacer(minLength: 490)
+            
+            textView()
+            
+            
+            
+        }
             
             
             
