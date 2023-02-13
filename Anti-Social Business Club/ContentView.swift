@@ -7,121 +7,122 @@
 
 import SwiftUI
 struct categoryView: View {
-    @State var isTapped = true
+    @State var isTapped = false
     let images = ["tshirt", "desktopcomputer","takeoutbag.and.cup.and.straw","plus","house", "mouth"]
-    var imageIndex = 0
+    @State var selectedImage = ""
+    
     var body: some View {
         
-        Button {
-            isTapped.toggle()
-        } label: {
-            
+        ForEach(images, id: \.self) { image in
+            ButtonView(selectedImage: $selectedImage, imageName: image)
+        }
+
+    }
+    
+    struct ButtonView: View {
+        @State var isTapped = false
+        @Binding var selectedImage: String
+        var imageName: String
+                
+        var backgroundColor: Color {
             if isTapped {
-                Image(images[imageIndex])
+                return .yellow
+            } else {
+                return .white
+            }
+        }
+        
+        var body: some View {
+            Button {
+                isTapped = true
+                selectedImage = imageName
+            } label: {
+                Image(systemName: imageName)
+                    .font(.title)
                     .frame(width: 91, height: 65)
                     .foregroundColor(.black)
-                    .padding()
-                    .background(.white)
+                    .background(backgroundColor)
                     .clipShape(Circle())
             }
-     //   };else {
-            Image(images[imageIndex])
-                .frame(width: 91, height: 65)
-                .foregroundColor(.black)
-                .padding()
-                .background(.white)
-                .clipShape(Circle())
-        
+            .onChange(of: selectedImage) { newValue in
+                if newValue != imageName {
+                    isTapped = false
+                }
+            }
+            
         }
     }
 }
 
+
+
 struct ContentView: View {
     @State private var searchText = ""
-    @State var isTapped = true
+    @State var isTapped = false
     
     var body: some View {
         NavigationView {
             VStack {
                 ScrollView(.horizontal) {
                     HStack {
-                        Button {
-                            isTapped.toggle()
-                            print("Button was pressed!")
-                        } label: {
-                            if isTapped {
-                                Image(systemName: "tshirt")
-                                    .frame(width: 91, height: 65)
-                                    .foregroundColor(.black)
-                                // .padding()
-                                    .background(.yellow)
-                                    .clipShape(Circle())
-                            } else {
-                                Image(systemName: "tshirt")
-                                    .frame(width: 91, height: 65)
-                                    .foregroundColor(.black)
-                                // .padding()
-                                    .background(.white)
-                                    .clipShape(Circle())
-                            }
-                            
-                        }
-                        Button {
-                            print("Button was pressed!")
-                        } label: {
-                            Image(systemName: "desktopcomputer")
-                                .frame(width: 91, height: 65)
-                                .foregroundColor(.black)
-                                //.padding()
-                                .background(.white)
-                                .clipShape(Circle())
-                            
-                        }
-                        Button {
-                            print("Button was pressed!")
-                        } label: {
-                            Image(systemName: "takeoutbag.and.cup.and.straw")
-                                .frame(width: 91, height: 65)
-                                .foregroundColor(.black)
-                               // .padding()
-                                .background(.white)
-                                .clipShape(Circle())
-                            
-                        }
-                        Button {
-                            print("Button was pressed!")
-                        } label: {
-                            Image(systemName: "plus")
-                                .frame(width: 91, height: 65)
-                                .foregroundColor(.black)
-                               // .padding()
-                                .background(.white)
-                                .clipShape(Circle())
-                            
-                        }
-                        Button {
-                            print("Button was pressed!")
-                        } label: {
-                            Image(systemName: "house")
-                                .frame(width: 91, height: 65)
-                                .foregroundColor(.black)
-                              //  .padding()
-                                .background(.white)
-                                .clipShape(Circle())
-                            
-                        }
-                        Button {
-                            print("Button was pressed!")
-                        } label: {
-                            Image(systemName: "mouth")
-                                .frame(width: 91, height: 65)
-                                .foregroundColor(.black)
-                             //   .padding()
-                                .background(.white)
-                                .clipShape(Circle())
-                            
-                            
-                        }
+//                        ForEach(category.terms, id: \.self) { attribute in Button {
+                        categoryView()
+//                        Button {
+//                            print("Button was pressed!")
+//                        } label: {
+//                            Image(systemName: "desktopcomputer")
+//                                .frame(width: 91, height: 65)
+//                                .foregroundColor(.black)
+//                                //.padding()
+//                                .background(.white)
+//                                .clipShape(Circle())
+//
+//                        }
+//                        Button {
+//                            print("Button was pressed!")
+//                        } label: {
+//                            Image(systemName: "takeoutbag.and.cup.and.straw")
+//                                .frame(width: 91, height: 65)
+//                                .foregroundColor(.black)
+//                               // .padding()
+//                                .background(.white)
+//                                .clipShape(Circle())
+//
+//                        }
+//                        Button {
+//                            print("Button was pressed!")
+//                        } label: {
+//                            Image(systemName: "plus")
+//                                .frame(width: 91, height: 65)
+//                                .foregroundColor(.black)
+//                               // .padding()
+//                                .background(.white)
+//                                .clipShape(Circle())
+//
+//                        }
+//                        Button {
+//                            print("Button was pressed!")
+//                        } label: {
+//                            Image(systemName: "house")
+//                                .frame(width: 91, height: 65)
+//                                .foregroundColor(.black)
+//                              //  .padding()
+//                                .background(.white)
+//                                .clipShape(Circle())
+//
+//                        }
+//                        Button {
+//                            print("Button was pressed!")
+//                        } label: {
+//                            Image(systemName: "mouth")
+//                                .frame(width: 91, height: 65)
+//                                .foregroundColor(.black)
+//                             //   .padding()
+//                                .background(.white)
+//                                .clipShape(Circle())
+//
+//
+//                        }
                         
                     }
                   .background { Color.mint }

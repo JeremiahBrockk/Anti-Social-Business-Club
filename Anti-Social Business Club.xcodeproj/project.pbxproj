@@ -16,6 +16,7 @@
 		0FFD39482995395100C510A5 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD39472995395100C510A5 /* MessageView.swift */; };
 		0FFD394E29968AC600C510A5 /* ColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD394D29968AC600C510A5 /* ColumnView.swift */; };
 		0FFD3950299A874200C510A5 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD394F299A874200C510A5 /* Tabs.swift */; };
+		0FFD3952299A95CB00C510A5 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD3951299A95CB00C510A5 /* ButtonView.swift */; };
 		C7F54BBA2993F8F000FCD2D9 /* chatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F54BB92993F8F000FCD2D9 /* chatView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		0FFD39472995395100C510A5 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		0FFD394D29968AC600C510A5 /* ColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnView.swift; sourceTree = "<group>"; };
 		0FFD394F299A874200C510A5 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		0FFD3951299A95CB00C510A5 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		C7F54BB92993F8F000FCD2D9 /* chatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				0F2969DB298164B3008EFB5D /* Anti_Social_Business_ClubApp.swift */,
 				0F2969F629895DA1008EFB5D /* SplashView.swift */,
 				0F2969DD298164B3008EFB5D /* ContentView.swift */,
+				0FFD3951299A95CB00C510A5 /* ButtonView.swift */,
 				0FFD394F299A874200C510A5 /* Tabs.swift */,
 				0FFD394D29968AC600C510A5 /* ColumnView.swift */,
 				0FFD39472995395100C510A5 /* MessageView.swift */,
@@ -165,6 +168,7 @@
 				0F2969DC298164B3008EFB5D /* Anti_Social_Business_ClubApp.swift in Sources */,
 				0F2969F729895DA1008EFB5D /* SplashView.swift in Sources */,
 				0FFD3950299A874200C510A5 /* Tabs.swift in Sources */,
+				0FFD3952299A95CB00C510A5 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

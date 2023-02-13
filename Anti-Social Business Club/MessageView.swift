@@ -44,7 +44,7 @@ struct MessageView: View {
                 Spacer()
                 
                   NavigationLink(destination: MessageView()){
-                Image("fluer")
+                Image("Fluer")
                     .resizable()
                     .scaledToFit()
                     .clipShape(Circle())
