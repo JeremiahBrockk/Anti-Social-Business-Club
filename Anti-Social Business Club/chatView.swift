@@ -25,23 +25,29 @@ struct ChatView: View {
                     HStack {
                         VStack(alignment: .leading, spacing: 3) {
                             HStack {
-                                Image("Flowers")
-                                    .renderingMode(.original)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .mask {
-                                        Circle()
-                                            .frame(height: 53)
-                                            .clipped()
-                                    }
-                                    .frame(width: 40)
-                                    .clipped()
+                                
+                                NavigationLink(destination: MessageView()){
+                                    Image("Flowers")
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .mask {
+                                            Circle()
+                                                .frame(height: 53)
+                                                .clipped()
+                                        }
+                                }
+                                        .frame(width: 40)
+                                        .clipped()
+                                
                                 Text("Ashley's flower shop".uppercased())
                                     .font(Font(UIFont.systemFont(ofSize: 15, weight: .semibold, width: .expanded)))
+                                    
                                 Text("2 min ago")
                                     .font(.caption.weight(.semibold))
                                     .foregroundColor(.secondary)
                             }
+                            
                             Text("Hey, I would like to set up a time to come look…")
                                 .font(.footnote)
                                 .foregroundColor(.secondary)

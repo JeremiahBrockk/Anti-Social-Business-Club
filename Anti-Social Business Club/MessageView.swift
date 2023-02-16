@@ -7,6 +7,7 @@
 
 //import Foundation
 import SwiftUI
+import keyboard
 
 struct textView: View {
     @State private var talk: String = " "
@@ -20,9 +21,11 @@ struct textView: View {
             Spacer()
             
             Image(systemName: "arrow.up.circle.fill")
-                .foregroundColor(.green)
+                .font(.title)
+                .foregroundColor(.blue)
                 .padding()
                 .padding()
+                .offset(x:315,y: -80)
             
         }
         
@@ -41,9 +44,9 @@ struct MessageView: View {
                     .italic()
                     .fontWeight(.bold)
                     .frame(width: 400, height:50)
-                Spacer()
+              //  Spacer()
                 
-                  NavigationLink(destination: MessageView()){
+                  NavigationLink(destination: Profile()){
                 Image("Fluer")
                     .resizable()
                     .scaledToFit()
@@ -53,7 +56,7 @@ struct MessageView: View {
                             .stroke(.red, style: StrokeStyle(lineWidth:1))
                     )
             }
-            Spacer(minLength: 490)
+            Spacer(minLength: 440)
             
             textView()
             

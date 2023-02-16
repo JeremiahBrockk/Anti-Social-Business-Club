@@ -13,17 +13,17 @@ struct Tabs: View {
             ContentView()
                 .tabItem {
                     Label("Feed", systemImage: "house")
-                        .foregroundColor(.yellow)
-                        
+                    
                 }
-            ContentView()
+            ChatView()
                 .tabItem {
                     Label("Chat", systemImage: "text.bubble.fill" )
-                        .foregroundColor(.yellow)
+                    
                 }
-            ContentView()
+            Profile()
                 .tabItem {
                     Label("Profile", systemImage: "person.circle")
+                    
                 }
         }
     }

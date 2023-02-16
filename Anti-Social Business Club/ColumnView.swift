@@ -28,6 +28,7 @@ struct ColumnView: View {
 struct ColumnImages_Previews: PreviewProvider {
     static var previews: some View {
         ColumnImages()
+        ColumnImages2()
     }
 }
     struct ColumnImages: View {
@@ -35,6 +36,7 @@ struct ColumnImages_Previews: PreviewProvider {
         [GridItem(.flexible()), GridItem(.flexible())]
         var body: some View {
             LazyVGrid(columns: columns) {
+                
                 ColumnView(name: "", imageName: "Image0")
                 ColumnView(name: "", imageName: "Image1")
                 ColumnView(name: "", imageName: "Image3")
@@ -45,3 +47,18 @@ struct ColumnImages_Previews: PreviewProvider {
             }
         }
     }
+struct ColumnImages2: View {
+    let columns: [GridItem] =
+    [GridItem(.flexible()), GridItem(.flexible())]
+    var body: some View {
+        LazyVGrid(columns: columns) {
+            ColumnView(name: "", imageName: "ImageB")
+            ColumnView(name: "", imageName: "ImageB1")
+            ColumnView(name: "", imageName: "ImageB2")
+            ColumnView(name: "", imageName: "ImageB3")
+            ColumnView(name: "", imageName: "ImageB4")
+            ColumnView(name: "", imageName: "Image0")
+            
+        }
+    }
+}

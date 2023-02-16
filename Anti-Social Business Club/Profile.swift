@@ -16,7 +16,7 @@ struct Profile: View {
                 
                 VStack {
                     Image(systemName: "plus.rectangle")
-                        .imageScale(.large)
+                        .font(.title)
                     
                 }
                 .frame(minHeight: 272)
@@ -24,7 +24,7 @@ struct Profile: View {
                 VStack {
                     Rectangle()
                         .foregroundStyle(.white)
-                        .frame(width: 400, height: 5)
+                        .frame(width: 400, height: 0)
                     Spacer()
                     
                     Text("Create A Bio")
@@ -56,7 +56,8 @@ struct Profile: View {
                         Spacer()
                     }
                 }
-                .background(.teal)
+                .background(.mint)
+                
                 
                 
             }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 struct categoryView: View {
     @State var isTapped = false
     let images = ["tshirt", "desktopcomputer","takeoutbag.and.cup.and.straw","plus","house", "mouth"]
@@ -16,17 +17,18 @@ struct categoryView: View {
         ForEach(images, id: \.self) { image in
             ButtonView(selectedImage: $selectedImage, imageName: image)
         }
-
+        
     }
     
     struct ButtonView: View {
         @State var isTapped = false
         @Binding var selectedImage: String
         var imageName: String
-                
+        
         var backgroundColor: Color {
             if isTapped {
                 return .yellow
+                
             } else {
                 return .white
             }
@@ -43,6 +45,7 @@ struct categoryView: View {
                     .foregroundColor(.black)
                     .background(backgroundColor)
                     .clipShape(Circle())
+                
             }
             .onChange(of: selectedImage) { newValue in
                 if newValue != imageName {
@@ -65,86 +68,32 @@ struct ContentView: View {
             VStack {
                 ScrollView(.horizontal) {
                     HStack {
-//                        ForEach(category.terms, id: \.self) { attribute in Button {
+                        //                        ForEach(category.terms, id: \.self) { attribute in Button {
                         categoryView()
-//                        Button {
-//                            print("Button was pressed!")
-//                        } label: {
-//                            Image(systemName: "desktopcomputer")
-//                                .frame(width: 91, height: 65)
-//                                .foregroundColor(.black)
-//                                //.padding()
-//                                .background(.white)
-//                                .clipShape(Circle())
-//
-//                        }
-//                        Button {
-//                            print("Button was pressed!")
-//                        } label: {
-//                            Image(systemName: "takeoutbag.and.cup.and.straw")
-//                                .frame(width: 91, height: 65)
-//                                .foregroundColor(.black)
-//                               // .padding()
-//                                .background(.white)
-//                                .clipShape(Circle())
-//
-//                        }
-//                        Button {
-//                            print("Button was pressed!")
-//                        } label: {
-//                            Image(systemName: "plus")
-//                                .frame(width: 91, height: 65)
-//                                .foregroundColor(.black)
-//                               // .padding()
-//                                .background(.white)
-//                                .clipShape(Circle())
-//
-//                        }
-//                        Button {
-//                            print("Button was pressed!")
-//                        } label: {
-//                            Image(systemName: "house")
-//                                .frame(width: 91, height: 65)
-//                                .foregroundColor(.black)
-//                              //  .padding()
-//                                .background(.white)
-//                                .clipShape(Circle())
-//
-//                        }
-//                        Button {
-//                            print("Button was pressed!")
-//                        } label: {
-//                            Image(systemName: "mouth")
-//                                .frame(width: 91, height: 65)
-//                                .foregroundColor(.black)
-//                             //   .padding()
-//                                .background(.white)
-//                                .clipShape(Circle())
-//
-//
-//                        }
+                        
                         
                     }
-                  .background { Color.mint }
+                    //   .background { Color.mint }
+                    
                     
                 }
                 Spacer()
                 NavigationView {
-                  //  VStack {
-                        ScrollView(.vertical) {
-                            ColumnImages()
-                  //      }
+                    //  VStack {
+                    ScrollView(.vertical) {
+                        ColumnImages()
+                        //      }
                     }
                 }
                 Spacer()
-                   .frame(height: 5)
+                    .frame(height: 5)
                 // eventually, this will be the view that holds all of the photos in a lazy v grid
             }
-         //.searchable(text: $searchText)
-           
+            //.searchable(text: $searchText)
             
-        //    .navigationTitle("app")
-//            .toolbarBackground(Color.mint, for: .navigationBar)
+            
+            //    .navigationTitle("app")
+            //            .toolbarBackground(Color.mint, for: .navigationBar)
         }
         .searchable(text: $searchText)
         

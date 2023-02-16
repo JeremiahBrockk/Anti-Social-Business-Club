@@ -21,6 +21,8 @@ struct ButtonView: View {
                 // .padding()
                     .background(.yellow)
                     .clipShape(Circle())
+                ColumnImages()
+                
             } else {
                 Image(systemName: "tshirt")
                     .frame(width: 91, height: 65)
@@ -29,7 +31,7 @@ struct ButtonView: View {
                     .background(.white)
                     .clipShape(Circle())
             }
-            
+            Spacer()
         }
     }
 }
