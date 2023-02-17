@@ -13,7 +13,10 @@
 		0F2969E3298164B4008EFB5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F2969E2298164B4008EFB5D /* Preview Assets.xcassets */; };
 		0F2969F729895DA1008EFB5D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2969F629895DA1008EFB5D /* SplashView.swift */; };
 		0F81628A29929F4200C63F15 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F81628929929F4200C63F15 /* Profile.swift */; };
-		DD1011F02993EDA20013AD72 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1011EF2993EDA20013AD72 /* ChatView.swift */; };
+		DD1011F02993EDA20013AD72 /* LookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1011EF2993EDA20013AD72 /* LookView.swift */; };
+		DD1011F2299401880013AD72 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1011F1299401880013AD72 /* MessageView.swift */; };
+		DD1011F4299D3F980013AD72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD1011F3299D3F980013AD72 /* GoogleService-Info.plist */; };
+		DD1011F7299E7D140013AD72 /* cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1011F6299E7D140013AD72 /* cloud.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +28,11 @@
 		0F2969F1298820A5008EFB5D /* Anti-Social-Business-Club-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Anti-Social-Business-Club-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0F2969F629895DA1008EFB5D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0F81628929929F4200C63F15 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		DD1011EF2993EDA20013AD72 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		DD1011EF2993EDA20013AD72 /* LookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookView.swift; sourceTree = "<group>"; };
+		DD1011F1299401880013AD72 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		DD1011F3299D3F980013AD72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DD1011F6299E7D140013AD72 /* cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cloud.swift; sourceTree = "<group>"; };
+		DD1011F8299E7D5A0013AD72 /* Anti-Social Business Club.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Anti-Social Business Club.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +65,17 @@
 		0F2969DA298164B3008EFB5D /* Anti-Social Business Club */ = {
 			isa = PBXGroup;
 			children = (
+				DD1011F8299E7D5A0013AD72 /* Anti-Social Business Club.entitlements */,
 				0F2969F1298820A5008EFB5D /* Anti-Social-Business-Club-Info.plist */,
 				0F2969DB298164B3008EFB5D /* Anti_Social_Business_ClubApp.swift */,
 				0F2969F629895DA1008EFB5D /* SplashView.swift */,
 				0F2969DD298164B3008EFB5D /* ContentView.swift */,
 				0F81628929929F4200C63F15 /* Profile.swift */,
-				DD1011EF2993EDA20013AD72 /* ChatView.swift */,
+				DD1011EF2993EDA20013AD72 /* LookView.swift */,
+				DD1011F6299E7D140013AD72 /* cloud.swift */,
+				DD1011F1299401880013AD72 /* MessageView.swift */,
 				0F2969DF298164B4008EFB5D /* Assets.xcassets */,
+				DD1011F3299D3F980013AD72 /* GoogleService-Info.plist */,
 				0F2969E1298164B4008EFB5D /* Preview Content */,
 			);
 			path = "Anti-Social Business Club";
@@ -122,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 0F2969CF298164B3008EFB5D;
+			packageReferences = (
+				DD1011F5299E6F320013AD72 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 0F2969D9298164B3008EFB5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +152,7 @@
 			files = (
 				0F2969E3298164B4008EFB5D /* Preview Assets.xcassets in Resources */,
 				0F2969E0298164B4008EFB5D /* Assets.xcassets in Resources */,
+				DD1011F4299D3F980013AD72 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,9 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD1011F2299401880013AD72 /* MessageView.swift in Sources */,
 				0F2969DE298164B3008EFB5D /* ContentView.swift in Sources */,
+				DD1011F7299E7D140013AD72 /* cloud.swift in Sources */,
 				0F81628A29929F4200C63F15 /* Profile.swift in Sources */,
-				DD1011F02993EDA20013AD72 /* ChatView.swift in Sources */,
+				DD1011F02993EDA20013AD72 /* LookView.swift in Sources */,
 				0F2969DC298164B3008EFB5D /* Anti_Social_Business_ClubApp.swift in Sources */,
 				0F2969F729895DA1008EFB5D /* SplashView.swift in Sources */,
 			);
@@ -278,9 +295,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Anti-Social Business Club/Anti-Social Business Club.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Anti-Social Business Club/Preview Content\"";
+				DEVELOPMENT_TEAM = WRFUF64A6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Anti-Social-Business-Club-Info.plist";
@@ -307,9 +326,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Anti-Social Business Club/Anti-Social Business Club.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Anti-Social Business Club/Preview Content\"";
+				DEVELOPMENT_TEAM = WRFUF64A6N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Anti-Social-Business-Club-Info.plist";
@@ -353,6 +374,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD1011F5299E6F320013AD72 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 0F2969D0298164B3008EFB5D /* Project object */;
 }

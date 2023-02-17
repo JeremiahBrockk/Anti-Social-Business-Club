@@ -1,5 +1,5 @@
 //
-//  ChatView.swift
+//  MessageView.swift
 //  Anti-Social Business Club
 //
 //  Created by Christopher Grayer Jr on 2/8/23.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct talkView: View {
+
+
+struct textView: View {
     @State private var talk: String = " "
     var body: some View {
         VStack(alignment: .leading) {
@@ -17,17 +19,22 @@ struct talkView: View {
                 .foregroundColor(.black)
                 .font(.headline)
                 Spacer()
+            
             Image(systemName: "arrow.up.circle.fill")
+                .padding()
+                .padding()
+                .offset(x:500,y:500)
                 .foregroundColor(.green)
                 
+               
         }
         
         
-    }
+                   }
 }
     
 
-struct LookView: View {
+struct MessageView: View {
     @State private var talk: String = "Tim"
     
     var body: some View {
@@ -40,7 +47,7 @@ struct LookView: View {
                 .frame(width: 400, height:50)
                 Spacer()
             
-            NavigationLink(destination: LookView()){
+            NavigationLink(destination: MessageView()){
                 Image("fluer")
                     .resizable()
                     .scaledToFit()
@@ -67,9 +74,9 @@ struct LookView: View {
        
         }
     
-    struct LookView_Previews: PreviewProvider {
+    struct MessageView_Previews: PreviewProvider {
         static var previews: some View {
-            LookView()
+            MessageView()
         }
     }
 }
