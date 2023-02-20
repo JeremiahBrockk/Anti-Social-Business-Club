@@ -16,20 +16,8 @@
 		0FFD394E29968AC600C510A5 /* ColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD394D29968AC600C510A5 /* ColumnView.swift */; };
 		0FFD3950299A874200C510A5 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD394F299A874200C510A5 /* Tabs.swift */; };
 		0FFD3952299A95CB00C510A5 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD3951299A95CB00C510A5 /* ButtonView.swift */; };
-		0FFD395A299D402E00C510A5 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD3959299D402E00C510A5 /* KeyboardViewController.swift */; };
-		0FFD395E299D402E00C510A5 /* keyboard.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0FFD3957299D402E00C510A5 /* keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C7F54BBA2993F8F000FCD2D9 /* chatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F54BB92993F8F000FCD2D9 /* chatView.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0FFD395C299D402E00C510A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F2969D0298164B3008EFB5D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0FFD3956299D402E00C510A5;
-			remoteInfo = keyboard;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0FFD3962299D402E00C510A5 /* Embed Foundation Extensions */ = {
@@ -38,7 +26,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0FFD395E299D402E00C510A5 /* keyboard.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,21 +44,11 @@
 		0FFD394D29968AC600C510A5 /* ColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnView.swift; sourceTree = "<group>"; };
 		0FFD394F299A874200C510A5 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		0FFD3951299A95CB00C510A5 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		0FFD3957299D402E00C510A5 /* keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = keyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FFD3959299D402E00C510A5 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		0FFD395B299D402E00C510A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7F54BB92993F8F000FCD2D9 /* chatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0F2969D5298164B3008EFB5D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0FFD3954299D402E00C510A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				0F2969DA298164B3008EFB5D /* Anti-Social Business Club */,
-				0FFD3958299D402E00C510A5 /* keyboard */,
 				0F2969D9298164B3008EFB5D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				0F2969D8298164B3008EFB5D /* Anti-Social Business Club.app */,
-				0FFD3957299D402E00C510A5 /* keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,15 +100,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		0FFD3958299D402E00C510A5 /* keyboard */ = {
-			isa = PBXGroup;
-			children = (
-				0FFD3959299D402E00C510A5 /* KeyboardViewController.swift */,
-				0FFD395B299D402E00C510A5 /* Info.plist */,
-			);
-			path = keyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,29 +115,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				0FFD395D299D402E00C510A5 /* PBXTargetDependency */,
 			);
 			name = "Anti-Social Business Club";
 			productName = "Anti-Social Business Club";
 			productReference = 0F2969D8298164B3008EFB5D /* Anti-Social Business Club.app */;
 			productType = "com.apple.product-type.application";
-		};
-		0FFD3956299D402E00C510A5 /* keyboard */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0FFD395F299D402E00C510A5 /* Build configuration list for PBXNativeTarget "keyboard" */;
-			buildPhases = (
-				0FFD3953299D402E00C510A5 /* Sources */,
-				0FFD3954299D402E00C510A5 /* Frameworks */,
-				0FFD3955299D402E00C510A5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = keyboard;
-			productName = keyboard;
-			productReference = 0FFD3957299D402E00C510A5 /* keyboard.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -184,9 +132,6 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					0F2969D7298164B3008EFB5D = {
-						CreatedOnToolsVersion = 14.2;
-					};
-					0FFD3956299D402E00C510A5 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -205,7 +150,6 @@
 			projectRoot = "";
 			targets = (
 				0F2969D7298164B3008EFB5D /* Anti-Social Business Club */,
-				0FFD3956299D402E00C510A5 /* keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -217,13 +161,6 @@
 			files = (
 				0F2969E3298164B4008EFB5D /* Preview Assets.xcassets in Resources */,
 				0F2969E0298164B4008EFB5D /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0FFD3955299D402E00C510A5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,23 +182,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0FFD3953299D402E00C510A5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0FFD395A299D402E00C510A5 /* KeyboardViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0FFD395D299D402E00C510A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0FFD3956299D402E00C510A5 /* keyboard */;
-			targetProxy = 0FFD395C299D402E00C510A5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0F2969E4298164B4008EFB5D /* Debug */ = {
@@ -387,20 +308,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Anti-Social Business Club/Preview Content\"";
+				DEVELOPMENT_TEAM = GYG86Q2966;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Anti-Social-Business-Club-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Project.Anti-Social-Business-Club";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ASBC.SmallBusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -417,69 +338,21 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Anti-Social Business Club/Preview Content\"";
+				DEVELOPMENT_TEAM = GYG86Q2966;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Anti-Social-Business-Club-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Project.Anti-Social-Business-Club";
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ASBC.SmallBusiness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		0FFD3960299D402E00C510A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = keyboard/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = keyboard;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Project.Anti-Social-Business-Club.keyboard";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		0FFD3961299D402E00C510A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = keyboard/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = keyboard;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Project.Anti-Social-Business-Club.keyboard";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -503,15 +376,6 @@
 			buildConfigurations = (
 				0F2969E7298164B4008EFB5D /* Debug */,
 				0F2969E8298164B4008EFB5D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0FFD395F299D402E00C510A5 /* Build configuration list for PBXNativeTarget "keyboard" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0FFD3960299D402E00C510A5 /* Debug */,
-				0FFD3961299D402E00C510A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

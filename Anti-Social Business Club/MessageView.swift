@@ -7,36 +7,71 @@
 
 //import Foundation
 import SwiftUI
-import keyboard
 
-struct textView: View {
-    @State private var talk: String = " "
+
+
+struct talkView: View {
+    @State  var talk: String = " "
+    @State var myChat: [String] = []
+    func chatList(){
+        
+        myChat.append(talk)
+    }
+    
+    @State var isTapped = false
     var body: some View {
         VStack(alignment: .leading) {
+            
+            List(myChat, id:\.self){
+                Text($0)
+                
+                
+            }
             TextField("Enter your name", text: $talk)
+                .border(.gray)
                 .padding()
                 .background(Color.gray.opacity(0.3).cornerRadius(10))
                 .foregroundColor(.black)
                 .font(.headline)
             Spacer()
             
-            Image(systemName: "arrow.up.circle.fill")
-                .font(.title)
-                .foregroundColor(.blue)
-                .padding()
-                .padding()
-                .offset(x:315,y: -80)
-            
+            Button {
+                isTapped = true
+                chatList()
+            } label: {
+                Image(systemName: "arrow.up.circle.fill")
+                    .foregroundColor(.green)
+                    .padding()
+                
+                if isTapped == true {
+                    
+                }
+            }
+            //            .offset(x:358,y:-60)
         }
-        
-        
     }
 }
 
-struct MessageView: View {
-    @State private var talk: String = "Tim"
+
+
+
+
+
+struct LookView: View {
+    // @State  var talk: String = "Tim"
     
-    var body: some View {
+    @State  var talk: String = " "
+    @State var myChat: [String] = []
+    func chatList(){
+        
+        myChat.append(talk)
+    }
+    
+    @State var isTapped = false
+    
+    //  @State var myChat: [String] = []
+    
+    var body:some View {
         NavigationView(){
             VStack{
                 Text("Flowers le Fleur")
@@ -44,38 +79,72 @@ struct MessageView: View {
                     .italic()
                     .fontWeight(.bold)
                     .frame(width: 400, height:50)
-              //  Spacer()
+                Spacer()
                 
-                  NavigationLink(destination: Profile()){
-                Image("Fluer")
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(Circle())
-                    .overlay(
-                        Circle()
-                            .stroke(.red, style: StrokeStyle(lineWidth:1))
-                    )
+                NavigationLink(destination: Profile()){
+                    Image("Fluer")
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(Circle())
+                        .overlay(
+                            Circle()
+                                .stroke(.red, style: StrokeStyle(lineWidth:1))
+                        )
+                }
+                //Spacer(minLength: 490)
+                
+                HStack {
+                    List(myChat, id:\.self){
+                        Text($0)
+                            .listStyle(.automatic)
+                    }
+                    .padding()
+                    .cornerRadius(8)
+                }
+                
+                
+                
+                // talkView()
+                
+                TextField("Enter your name", text: $talk)
+                    .border(.gray)
+                    .padding()
+                    .background(Color.gray.opacity(0.3).cornerRadius(10))
+                    .foregroundColor(.black)
+                    .font(.headline)
+                Spacer()
+                
+                Button {
+                    isTapped = true
+                    chatList()
+                } label: {
+                    Image(systemName: "arrow.up.circle.fill")
+                        .foregroundColor(.green)
+                        .padding()
+                    
+                    if isTapped == true {
+                        
+                    }
+                }
+                .offset(x:190,y:-60)
+                
+                
+                
+                
             }
-            Spacer(minLength: 440)
-            
-            textView()
-            
-            
             
         }
-            
-            
-            
-            
-        }
-        
         
         
     }
     
-    struct MessageView_Previews: PreviewProvider {
-        static var previews: some View {
-            MessageView()
-        }
+    
+    
+}
+
+struct LookView_Previews: PreviewProvider {
+    static var previews: some View {
+        LookView()
     }
 }
+
